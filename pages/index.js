@@ -10,36 +10,21 @@ import Html from "../components/icons/Html";
 import Css from "../components/icons/Css";
 import Javascript from "../components/icons/Javascript";
 import Tailwind from "../components/icons/Tailwind";
-import Bootstrap from "../components/icons/Bootstrap";
 import Sass from "../components/icons/Sass";
 import ReactJs from "../components/icons/ReactJs";
 import NextJs from "../components/icons/NextJs";
 import NodeJs from "../components/icons/NodeJs";
 import Firebase from "../components/icons/Firebase";
-import Figma from "../components/icons/Figma";
-import Photoshop from "../components/icons/Photoshop";
-import Illustrator from "../components/icons/Illustrator";
-import AfterEffects from "../components/icons/AfterEffects";
-import AdobeXd from "../components/icons/AdobeXd";
 import Supabase from "../components/icons/Supabase";
-import MongoDb from "../components/icons/MongoDb";
-import Express from "../components/icons/Express";
-// Project Card
-import ProjectCard from "../components/ProjectCard";
 import GitHubProfile from "../components/icons/GitHubProfile";
-import TwitterProfile from "../components/icons/TwitterProfile";
 import LinkedInProfile from "../components/icons/LinkedInProfile";
 import FeaturedProjectCard from "../components/FeaturedProjectCard";
-
-// Blog Components
-import BlogList from "../components/blog/BlogList";
-import BlogItem from "../components/blog/BlogItem";
 
 // Dark Mode
 import { useTheme } from "next-themes";
 
-import { projects } from "../utils/constants";
 import NewIcon from "../components/NewIcon";
+import Figma from "../components/icons/Figma";
 
 const getDimensions = (ele) => {
   const { height } = ele.getBoundingClientRect();
@@ -66,7 +51,6 @@ export default function Home({ publications }) {
   const [scrollPosition, setScrollPosition] = useState(0);
   const [navbarOpen, setNavbarOpen] = useState(false);
   const [showHeader, setShowHeader] = useState(true);
-  const [isMobile, setIsMobile] = useState(false);
   const [mounted, setMounted] = useState(false);
   const { systemTheme, theme, setTheme } = useTheme();
 
@@ -223,10 +207,10 @@ export default function Home({ publications }) {
         }`}
       >
         <Head>
-          <title>Daniel Cranney | Frontend Developer & Designer</title>
+          <title>Pedro Augusto | Frontend Developer & Designer</title>
           <meta
             name="description"
-            content="The portfolio of frontend developer and designer, Daniel Cranney"
+            content="The portfolio of frontend developer and designer, Pedro Augusto"
           />
           <link rel="icon" href="/favicon.ico" />
         </Head>
@@ -262,7 +246,7 @@ export default function Home({ publications }) {
                   <button
                     href="#"
                     className={`header_link text-xl font-semibold transition-all duration-150 ease-in-out ${
-                      visibleSection === "about"
+                      visibleSection === "sobre"
                         ? "current"
                         : "dark:text-light dark:hover:text-white text-mid hover:text-mid border-b-2 border-transparent"
                     }`}
@@ -271,7 +255,7 @@ export default function Home({ publications }) {
                       scrollTo(aboutRef.current);
                     }}
                   >
-                    About
+                    Sobre
                   </button>
                 </li>
                 <li className="z-50 block py-2 list-none lg:inline-block">
@@ -309,26 +293,8 @@ export default function Home({ publications }) {
                 <li className="z-50 block py-2 list-none lg:inline-block">
                   <button
                     href="#"
-                    target="_blank"
-                    rel="noreferrer"
                     className={`header_link text-xl font-semibold transition-all duration-150 ease-in-out ${
-                      visibleSection === "blog"
-                        ? "current"
-                        : "dark:text-light dark:hover:text-white text-mid hover:text-mid border-b-2 border-transparent"
-                    }`}
-                    onClick={() => {
-                      setNavbarOpen(false);
-                      scrollTo(blogRef.current);
-                    }}
-                  >
-                    Blog
-                  </button>
-                </li>
-                <li className="z-50 block py-2 list-none lg:inline-block">
-                  <button
-                    href="#"
-                    className={`header_link text-xl font-semibold transition-all duration-150 ease-in-out ${
-                      visibleSection === "contact"
+                      visibleSection === "contato"
                         ? "current"
                         : "dark:text-light dark:hover:text-white text-mid hover:text-mid border-b-2 border-transparent"
                     }`}
@@ -337,7 +303,7 @@ export default function Home({ publications }) {
                       scrollTo(contactRef.current);
                     }}
                   >
-                    Contact
+                    Contato
                   </button>
                 </li>
                 <li className="z-40 block py-2 mt-6 list-none lg:inline-block">
@@ -369,7 +335,7 @@ export default function Home({ publications }) {
             {/* Text */}
             <div className="flex items-center ml-4">
               <p className="text-lg font-semibold font-display tracking-tight dark:text-white text-darker mb-0 transition-all duration-150 ease-in-out">
-                Daniel Cranney
+                Pedro Augusto
               </p>
             </div>
             {/* Nav */}
@@ -392,13 +358,13 @@ export default function Home({ publications }) {
                   <button
                     href="#"
                     className={`nav-item ${
-                      visibleSection === "about" ? "current" : "active"
+                      visibleSection === "sobre" ? "current" : "active"
                     }`}
                     onClick={() => {
                       scrollTo(aboutRef.current);
                     }}
                   >
-                    About
+                    Sobre
                   </button>
                 </li>
                 <li className="z-50 hidden mx-5 list-none lg:inline-block">
@@ -418,49 +384,34 @@ export default function Home({ publications }) {
                   <button
                     href="#"
                     className={`nav-item ${
-                      visibleSection === "my-work" ? "current" : "active"
+                      visibleSection === "meus-trabalhos" ? "current" : "active"
                     }`}
                     onClick={() => {
                       scrollTo(myWorkRef.current);
                     }}
                   >
-                    My Work
-                  </button>
-                </li>
-                <li className="z-50 hidden mx-5 list-none lg:inline-block">
-                  <button
-                    href="#"
-                    target="_blank"
-                    rel="noreferrer"
-                    className={`nav-item ${
-                      visibleSection === "blog" ? "current" : "active"
-                    }`}
-                    onClick={() => {
-                      scrollTo(blogRef.current);
-                    }}
-                  >
-                    Blog
+                    Meus Trabalhos
                   </button>
                 </li>
                 <li className="z-50 hidden mx-5 list-none lg:inline-block">
                   <button
                     href="#"
                     className={`nav-item ${
-                      visibleSection === "contact" ? "current" : "active"
+                      visibleSection === "Contato" ? "current" : "active"
                     }`}
                     onClick={() => {
                       scrollTo(contactRef.current);
                     }}
                   >
-                    Contact
+                    Contato
                   </button>
                 </li>
                 <li className="z-50 hidden ml-5 list-none lg:inline-block">
                   <a
-                    href={`mailto:danielcranney@gmail.com`}
+                    href={`mailto:pedroaugustolopesgomes@gmail.com`}
                     className="btn-brand btn-md group"
                   >
-                    Hire me
+                    contrate-me
                   </a>
                 </li>
                 <li className="z-50 inline-block list-none lg:hidden group">
@@ -522,7 +473,7 @@ export default function Home({ publications }) {
                 </span> */}
 
                 <h1 className="mb-2 text-5xl md:text-7xl dark:text-white text-dark">
-                  Daniel Cranney
+                  Pedro Augusto
                 </h1>
                 <h2 className="mb-4 text-3xl md:text-4xl dark:text-light text-mid">
                   <ReactTypingEffect
@@ -530,16 +481,11 @@ export default function Home({ publications }) {
                     speed={30}
                     eraseSpeed={30}
                     eraseDelay={1500}
-                    text={[
-                      "Developer Advocate",
-                      "Developer",
-                      "Public Speaker",
-                      `Cat Dad`,
-                    ]}
+                    text={["Desenvolvedor Front-end", "Desenvolvedor", "UI/UX"]}
                   />
                 </h2>
                 <p className="w-4/5 text-xl md:w-full">
-                  I design and build websites that look good, and work well.
+                  Trabalho construindos sites responsivos e de qualidade
                 </p>
                 <button
                   className="mt-4 btn-brand btn-lg group"
@@ -547,7 +493,7 @@ export default function Home({ publications }) {
                     scrollTo(myWorkRef.current);
                   }}
                 >
-                  See my Work
+                  Veja meus Trabalhos
                 </button>
               </div>
             </div>
@@ -560,57 +506,33 @@ export default function Home({ publications }) {
             ref={aboutRef}
           >
             <div className="flex flex-col">
-              <h2 className="text-5xl">About</h2>
+              <h2 className="text-5xl">Sobre</h2>
               <hr className="bg-brand w-40 h-1.5 mt-4 mb-6 border-0"></hr>
 
               <div className="flex flex-col-reverse items-start w-full md:flex-row">
                 <div className="flex flex-col w-full md:pr-8 md:w-3/5">
                   <p className="text-lg">
-                    Hi! I&apos;m Dan and I&apos;m a frontend developer, designer
-                    and teacher from Bristol, England.
+                    Oi! Meu nome é Pedro, sou desenvolvedor front-end, designer
+                    e estudante no Centro Universitário de João Pessoa.
                   </p>
-                  <p className="text-lg">
-                    After building my first website aged thirteen, I knew I
-                    wanted to work with computers and technology, and I&apos;ve
-                    never looked back.
-                  </p>
-                  <p className="text-lg">
-                    After graduating University with a Media degree, I began
-                    freelancing as a designer, creating graphics, video content
-                    and websites for small businesses, using content management
-                    systems like Wordpress, Joomla and Squarespace.
-                  </p>
-                  <p className="text-lg">
-                    In recent years, I&apos;ve been focused on programming,
-                    building a solid frontend stack and creating exciting
-                    projects that solve real-world problems.
-                  </p>
-                  <p className="text-lg">
-                    Alongside my design and development work, I run a BA Media
-                    Production degree course and a corporate video production
-                    company called{" "}
-                    <a
-                      href="http://www.wearespotlight.co.uk"
-                      target="_blank"
-                      className="underline-link"
-                      rel="noreferrer"
-                    >
-                      Spotlight Media
-                    </a>
-                    , so I like to keep busy!
-                  </p>
-                  <p className="text-lg">
-                    Take a look at my work below to see what I&apos;m working
-                    on, and get in touch if you&apos;d like to work together!
+                  <p className="text-lg text-justify">
+                    Iniciei minha jornada em programação aos 19 anos na
+                    universidade Unipê, onde descobri minha paixão pela Ciência
+                    da Computação. Optei por focar minha carreira no
+                    desenvolvimento web, pois me permite criar produtos
+                    impactantes. Além disso, busco aprimoramento constante
+                    através de cursos. No tempo livre, aprecio filmes e séries,
+                    pratico exercícios físicos e tenho um grande interesse em
+                    adquirir conhecimento, especialmente em tecnologia.
                   </p>
                 </div>
                 <div className="flex w-full h-full mb-4 md:pl-8 md:w-2/5 md:mb-0">
                   <Image
-                    src="/headshot-2023.jpg"
+                    src="/eu1.png"
                     className="overflow-hidden rounded-md"
                     width={880}
                     height={880}
-                    alt={"Daniel Cranney headshot"}
+                    alt={"Pedro Augusto headshot"}
                   />
                 </div>
               </div>
@@ -660,6 +582,22 @@ export default function Home({ publications }) {
                 fixedHeight={"h-28"}
               />
 
+              {/* Sass */}
+              <Icon
+                IconType={Sass}
+                title="Sass"
+                width={"w-16"}
+                height={"h-16"}
+                padding={"p-0"}
+                flexDirection={"flex-col"}
+                titleMargins={"mt-4"}
+                titleSize={"text-sm sm:text-sm"}
+                marginBottom={"mb-4"}
+                marginRight={"mr-0"}
+                textTransform={"normal-case"}
+                fixedHeight={"h-28"}
+              />
+
               {/* Tailwind */}
               <Icon
                 IconType={Tailwind}
@@ -674,6 +612,21 @@ export default function Home({ publications }) {
                 marginRight={"mr-0"}
                 textTransform={"normal-case"}
                 fixedHeight={"h-28"}
+              />
+
+              <Figma
+                IconType={Figma}
+                title="Figma"
+                width={64} // ou a largura desejada em pixels
+                height={64} // ou a altura desejada em pixels
+                padding="p-0"
+                flexDirection="flex-col"
+                titleMargins="mt-4"
+                titleSize="text-sm sm:text-sm"
+                marginBottom="mb-4"
+                marginRight="mr-0"
+                textTransform="normal-case"
+                fixedHeight="h-28"
               />
 
               {/* Javascript */}
@@ -740,22 +693,6 @@ export default function Home({ publications }) {
                 fixedHeight={"h-28"}
               />
 
-              {/* Express */}
-              <Icon
-                IconType={Express}
-                title="Express"
-                width={"w-16"}
-                height={"h-16"}
-                padding={"p-0"}
-                flexDirection={"flex-col"}
-                titleMargins={"mt-4"}
-                titleSize={"text-sm sm:text-sm"}
-                marginBottom={"mb-4"}
-                marginRight={"mr-0"}
-                textTransform={"normal-case"}
-                fixedHeight={"h-28"}
-              />
-
               {/* Supabase */}
               <Icon
                 IconType={Supabase}
@@ -772,122 +709,10 @@ export default function Home({ publications }) {
                 fixedHeight={"h-28"}
               />
 
-              {/* MongoDb */}
-              <Icon
-                IconType={MongoDb}
-                title="MongoDb"
-                width={"w-16"}
-                height={"h-16"}
-                padding={"p-0"}
-                flexDirection={"flex-col"}
-                titleMargins={"mt-4"}
-                titleSize={"text-sm sm:text-sm"}
-                marginBottom={"mb-4"}
-                marginRight={"mr-0"}
-                textTransform={"normal-case"}
-                fixedHeight={"h-28"}
-              />
-
-              {/* Sass */}
-              <Icon
-                IconType={Sass}
-                title="Sass"
-                width={"w-16"}
-                height={"h-16"}
-                padding={"p-0"}
-                flexDirection={"flex-col"}
-                titleMargins={"mt-4"}
-                titleSize={"text-sm sm:text-sm"}
-                marginBottom={"mb-4"}
-                marginRight={"mr-0"}
-                textTransform={"normal-case"}
-                fixedHeight={"h-28"}
-              />
-
-              {/* Bootstrap */}
-              {/* <Icon
-                IconType={Bootstrap}
-                title="Bootstrap"
-                width={"w-16"}
-                height={"h-16"}
-                padding={"p-0"}
-                flexDirection={"flex-col"}
-                titleMargins={"mt-4"}
-                titleSize={"text-sm sm:text-sm"}
-                marginBottom={"mb-4"}
-                marginRight={"mr-0"}
-                textTransform={"normal-case"}
-                fixedHeight={"h-28"}
-              /> */}
-
               {/* Firebase */}
               <Icon
                 IconType={Firebase}
                 title="Firebase"
-                width={"w-16"}
-                height={"h-16"}
-                padding={"p-0"}
-                flexDirection={"flex-col"}
-                titleMargins={"mt-4"}
-                titleSize={"text-sm sm:text-sm"}
-                marginBottom={"mb-4"}
-                marginRight={"mr-0"}
-                textTransform={"normal-case"}
-                fixedHeight={"h-28"}
-              />
-
-              {/* Photoshop */}
-              <Icon
-                IconType={Photoshop}
-                title="Photoshop"
-                width={"w-16"}
-                height={"h-16"}
-                padding={"p-0"}
-                flexDirection={"flex-col"}
-                titleMargins={"mt-4"}
-                titleSize={"text-sm sm:text-sm"}
-                marginBottom={"mb-4"}
-                marginRight={"mr-0"}
-                textTransform={"normal-case"}
-                fixedHeight={"h-28"}
-              />
-
-              {/* Illustrator */}
-              <Icon
-                IconType={Illustrator}
-                title="Illustrator"
-                width={"w-16"}
-                height={"h-16"}
-                padding={"p-0"}
-                flexDirection={"flex-col"}
-                titleMargins={"mt-4"}
-                titleSize={"text-sm sm:text-sm"}
-                marginBottom={"mb-4"}
-                marginRight={"mr-0"}
-                textTransform={"normal-case"}
-                fixedHeight={"h-28"}
-              />
-
-              {/* After Effects */}
-              <Icon
-                IconType={AfterEffects}
-                title="After Effects"
-                width={"w-16"}
-                height={"h-16"}
-                padding={"p-0"}
-                flexDirection={"flex-col"}
-                titleMargins={"mt-4"}
-                titleSize={"text-sm sm:text-sm"}
-                marginBottom={"mb-4"}
-                marginRight={"mr-0"}
-                textTransform={"normal-case"}
-                fixedHeight={"h-28"}
-              />
-
-              {/* Adobe XD */}
-              <Icon
-                IconType={AdobeXd}
-                title="Adobe XD"
                 width={"w-16"}
                 height={"h-16"}
                 padding={"p-0"}
@@ -909,22 +734,22 @@ export default function Home({ publications }) {
             ref={myWorkRef}
           >
             {/* My Work header */}
-            <h2 className="text-5xl">My Work</h2>
+            <h2 className="text-5xl">Meus Trabalhos</h2>
             <hr className="bg-brand w-40 h-1.5 mt-4 mb-6 border-0"></hr>
 
             {/* Featured Projects Container */}
             <div className="flex flex-col w-full mb-12">
               {/* Project One */}
               <FeaturedProjectCard
-                title={"Smylo"}
-                status={"Join the Waitlist"}
-                description={`Keep your life on track and never miss another important date again`}
+                title={"E-commercer"}
+                status={"Vestuário"}
+                description={`Explore uma experiência de compras intuitiva e elegante para moda com nosso projeto de e-commerce. `}
                 float={`right-0`}
                 flexDirection={`flex-col lg:flex-row`}
                 imgWidth={"1366"}
                 imgHeight={"666"}
-                imgSrc={"/projects/smylo.png"}
-                liveLink={"https://smylo.co/"}
+                imgSrc={"/projeto1.png"}
+                liveLink={"https://e-commerce-gilt-nine.vercel.app/"}
                 repoLink={null}
                 stack={
                   <>
@@ -977,23 +802,7 @@ export default function Home({ publications }) {
                     />
 
                     <Icon
-                      IconType={NextJs}
-                      title="Next"
-                      columnSizing={"w-auto"}
-                      width={"w-6"}
-                      height={"h-6"}
-                      flexDirection={"flex-row"}
-                      padding={"p-0"}
-                      titleMargins={"my-0 ml-1"}
-                      titleSize={"text-sm"}
-                      marginBottom={"mb-4"}
-                      marginRight={"mr-3"}
-                      textTransform={"uppercase"}
-                      fixedHeight={"h-auto"}
-                    />
-
-                    <Icon
-                      IconType={Supabase}
+                      IconType={Firebase}
                       title="Supabase"
                       columnSizing={"w-auto"}
                       width={"w-6"}
@@ -1012,15 +821,15 @@ export default function Home({ publications }) {
               />
               {/* Project Two */}
               <FeaturedProjectCard
-                title={"ColorHub"}
-                status={"V2 Just Launched"}
-                description={`Find the perfect palette for your next perfect. pick it, preview it and paste it right into your code.`}
+                title={"Go Trips"}
+                status={"Imóveis"}
+                description={`Descubra escapadelas de fim de semana perfeitas com nosso site de reserva de hotéis e casas, oferecendo uma seleção cuidadosamente curada de acomodações para uma estadia memorável e relaxante.`}
                 float={`right-0`}
                 flexDirection={`flex-col lg:flex-row-reverse`}
                 imgWidth={"1366"}
                 imgHeight={"666"}
-                imgSrc={"/projects/colorhub.png"}
-                liveLink={"https://colorhub.app/"}
+                imgSrc={"/projeto2.png"}
+                liveLink={"https://trip-reservation-zy3c.vercel.app/"}
                 repoLink={null}
                 stack={
                   <>
@@ -1087,73 +896,8 @@ export default function Home({ publications }) {
                       textTransform={"uppercase"}
                       fixedHeight={"h-auto"}
                     />
-                  </>
-                }
-              />
-              {/* Project Three */}
-              <FeaturedProjectCard
-                title={"ProfileMe.dev"}
-                status={"Open Source"}
-                description={`Create an amazing GitHub profile complete with skills icons, stat graphs and more in just a couple of minutes.`}
-                float={`right-0`}
-                flexDirection={`flex-col lg:flex-row`}
-                imgWidth={"1366"}
-                imgHeight={"666"}
-                imgSrc={"/projects/profileme.png"}
-                liveLink={"https://profileme.dev"}
-                repoLink={"https://github.com/danielcranney/profileme.dev"}
-                stack={
-                  <>
                     <Icon
-                      IconType={Html}
-                      title="HTML"
-                      columnSizing={"w-auto"}
-                      width={"w-6"}
-                      height={"h-6"}
-                      flexDirection={"flex-row"}
-                      padding={"p-0"}
-                      titleMargins={"my-0 ml-1"}
-                      titleSize={"text-sm"}
-                      marginBottom={"mb-4"}
-                      marginRight={"mr-3"}
-                      textTransform={"uppercase"}
-                      fixedHeight={"h-auto"}
-                    />
-
-                    <Icon
-                      IconType={Tailwind}
-                      title="Tailwind"
-                      columnSizing={"w-auto"}
-                      width={"w-6"}
-                      height={"h-6"}
-                      flexDirection={"flex-row"}
-                      padding={"p-0"}
-                      titleMargins={"my-0 ml-1"}
-                      titleSize={"text-sm"}
-                      marginBottom={"mb-4"}
-                      marginRight={"mr-3"}
-                      textTransform={"uppercase"}
-                      fixedHeight={"h-auto"}
-                    />
-
-                    <Icon
-                      IconType={ReactJs}
-                      title="React"
-                      columnSizing={"w-auto"}
-                      width={"w-6"}
-                      height={"h-6"}
-                      flexDirection={"flex-row"}
-                      padding={"p-0"}
-                      titleMargins={"my-0 ml-1"}
-                      titleSize={"text-sm"}
-                      marginBottom={"mb-4"}
-                      marginRight={"mr-3"}
-                      textTransform={"uppercase"}
-                      fixedHeight={"h-auto"}
-                    />
-
-                    <Icon
-                      IconType={NextJs}
+                      IconType={Supabase}
                       title="Next"
                       columnSizing={"w-auto"}
                       width={"w-6"}
@@ -1173,56 +917,89 @@ export default function Home({ publications }) {
             </div>
 
             {/* Other Projects header */}
-            <h2 className="text-4xl text-center">Other Projects</h2>
+            <h2 className="text-4xl text-center">Experiências</h2>
             <hr className="bg-brand w-40 h-1.5 mt-4 mb-6 mx-auto border-0"></hr>
-            <p className="mb-16 text-lg text-center">
-              Check out some of the projects I&apos;ve been a part of...
-            </p>
 
             {/* Other Projects Container */}
-            <div className="grid grid-flow-row grid-rows-2 gap-4 grid-col-1 lg:grid-cols-3">
-              {projects.map(function (project, i) {
-                return <ProjectCard project={project} key={i} />;
-              })}
+            <div className="grid grid-flow-row gap-4 grid-cols-1 lg:grid-cols-2">
+              <div className="flex flex-col w-full rounded-md bg-white dark:bg-dark/20 px-7 py-7 shadow-md shadow-light/10 dark:shadow-darker">
+                <p className="inline-block px-0 pb-5 mb-4 text-xl font-bold border-b-4 flex-start border-brand dark:text-white text-dark">
+                  Ubtech Office| Desenvolvedor Front-end
+                </p>
+                <ul className="list-disc ml-5">
+                  <li className="dark:text-white text-dark">
+                    Participei de um projeto como desenvolvedor front-end por um
+                    período de 6 meses em 2023. O projeto foi realizado por uma
+                    equipe de 3 desenvolvedores e um Product Owner (PO).{" "}
+                  </li>
+                  <li className="dark:text-white text-dark">
+                    Enfrentei vários desafios durante o projeto, incluindo a
+                    criação de um layout do zero, ajustando tecnologias para
+                    atender às necessidades do projeto e realizando o deploy do
+                    site.{" "}
+                  </li>
+                  <li className="dark:text-white text-dark">
+                    Para superar esses desafios, utilizei o Figma para
+                    desenvolver o layout e o React como tecnologia principal.
+                    Para fazer o deploy, tive que ler documentações e ajustar as
+                    variáveis de ambiente.{" "}
+                  </li>
+                  <li className="dark:text-white text-dark">
+                    Finalmente, esta experiência reforçou a minha paixão pelo
+                    desenvolvimento front-end e me motivou a continuar
+                    aprendendo e crescendo nesta área.{" "}
+                  </li>
+                </ul>
+              </div>
+              <div className="flex flex-col w-full rounded-md bg-white dark:bg-dark/20 px-7 py-7 shadow-md shadow-light/10 dark:shadow-darker">
+                <p className="inline-block px-0 pb-5 mb-4 text-xl font-bold border-b-4 flex-start border-brand dark:text-white text-dark">
+                  ECS - Escola de computação solidária | Monitor
+                </p>
+                <ul className="list-disc ml-5">
+                <li className="dark:text-white text-dark">
+                    Trabalhei como monitor de turmas por um período de 6 meses
+                    em 2022.{" "}
+                  </li>
+                  <li className="dark:text-white text-dark">
+                    Durante esse período, adquiri experiências valiosas em
+                    comunicação e aprendi a transmitir de maneira eficaz os
+                    assuntos em aula aos alunos.{" "}
+                  </li>
+                  <li className="dark:text-white text-dark">
+                    Um dos principais desafios que enfrentei foi na comunicação.
+                    Aprender a transmitir informações complexas de maneira clara
+                    e compreensível foi um desafio, mas também uma habilidade
+                    valiosa que desenvolvi durante esse período.{" "}
+                  </li>
+                </ul>
+              </div>
             </div>
           </section>
-
-          {/* Blog */}
-          {/* <section
-            className="flex flex-col w-full px-0 md:px-20 lg:px-24 py-28 section"
-            id="blog"
-            ref={blogRef}
-          >
-            <h2 className="text-5xl">Blog</h2>
-            <hr className="bg-brand w-40 h-1.5 mt-4 mb-6 border-0"></hr>
-
-            <BlogList publications={publications} />
-          </section> */}
-
           {/* Contact */}
           <section
             className="flex flex-col w-full px-0 md:px-20 lg:px-24 py-28 section"
             id="contact"
             ref={contactRef}
           >
-            <h2 className="text-5xl">Contact</h2>
+            <h2 className="text-5xl">Contato</h2>
             <hr className="bg-brand w-40 h-1.5 mt-4 mb-6 border-0"></hr>
 
             <div className="flex flex-col-reverse w-full md:flex-row">
               <div className="w-full mb-4 md:pl-0 md:mb-0">
                 <p className="text-lg">
-                  I&apos;m currently available to get involved in new projects,
-                  so get in touch if you&apos;d like to work together.
+                  Atualmente estou disponível para me envolver em novos
+                  projetos, então entre em contato se quiser trabalharmos
+                  juntos.
                 </p>
                 <p className="text-lg">
-                  Email me at{" "}
+                  Este é meu Email{" "}
                   <Link
-                    href="mailto:danielcranney@gmail.com"
+                    href="mailto:pedroaugustolopesgomes@gmail.com"
                     className="underline-link"
                   >
-                    danielcranney@gmail.com
+                    pedroaugustolopesgomes@gmail.com
                   </Link>{" "}
-                  and let&apos;s talk about your project!
+                  e vamos conversar sobre seu projeto!
                 </p>
               </div>
             </div>
@@ -1260,16 +1037,12 @@ export default function Home({ publications }) {
 
             <div className="flex flex-col items-start md:flex-row">
               <p className="w-auto mb-4 md:mb-0">
-                &copy; {new Date().getFullYear()} - Designed and built by Daniel
-                Cranney
+                &copy; {new Date().getFullYear()} - Construído por Pedro Augusto
               </p>
 
               <div className="flex md:hidden">
                 <span className="mr-2">
                   <GitHubProfile marginBottom={"mb-0"} />
-                </span>
-                <span className="mr-2">
-                  <TwitterProfile marginBottom={"mb-0"} />
                 </span>
                 <span className="mr-2">
                   <LinkedInProfile marginBottom={"mb-0"} />
@@ -1285,7 +1058,6 @@ export default function Home({ publications }) {
             {/* Profile Icons */}
             <div className="absolute bottom-0 items-center hidden mt-auto mr-auto text-white left-8 md:flex md:flex-col">
               <GitHubProfile marginBottom={"mb-4"} />
-              <TwitterProfile marginBottom={"mb-4"} />
               <LinkedInProfile marginBottom={"mb-4"} />
               <div className="w-0.5 dark:bg-white bg-dark h-24 opacity-20 mt-2"></div>
             </div>
@@ -1448,45 +1220,6 @@ export default function Home({ publications }) {
                   />
                 </svg>
               </button>
-              {/* Blog - Diamond 5 */}
-              <button
-                className="w-5 h-5 mb-4"
-                onClick={() => {
-                  scrollTo(blogRef.current);
-                }}
-              >
-                <svg
-                  id="e5c888e5-3206-4553-8f53-60ee93248ad9"
-                  className={`group rounded-sm transform transition duration-500 ease-in-out hover:rotate-45 hover:scale-110 ${
-                    visibleSection === "blog"
-                      ? "rotate-45 scale-110"
-                      : "rotate-0 scale-100"
-                  }`}
-                  data-name="Layer 1"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0
-              0 24 24"
-                >
-                  {/* Fill */}
-                  <path
-                    className={`fill-current origin-center transform transition duration-200 ease-in-out group-hover:text-dark dark:group-hover:text-white group-hover:rotate-90 ${
-                      visibleSection === "blog"
-                        ? "dark:text-white text-mid rotate-90"
-                        : "dark:text-dark text-light rotate-0"
-                    }`}
-                    d="M5.64 5.64h12.73v12.73H5.64z"
-                  />
-                  {/* Border */}
-                  <path
-                    className={`fill-current origin-center transform transition duration-500 ease-in-out dark:group-hover:text-white group-hover:text-dark group-hover:rotate-45 group-hover:opacity-100 ${
-                      visibleSection === "blog"
-                        ? "dark:text-white text-dark rotate-45 opacity-100"
-                        : "dark:text-white text-light rotate-45"
-                    }`}
-                    d="M12 22.41L1.59 12 12 1.59 22.41 12zM4.41 12L12 19.59 19.59 12 12 4.41z"
-                  />
-                </svg>
-              </button>
               {/* Contact - Diamond 6 */}
               <button
                 className="w-5 h-5 mb-4"
@@ -1536,30 +1269,3 @@ export default function Home({ publications }) {
     </div>
   );
 }
-
-// export async function getServerSideProps(context) {
-//   const res = await fetch("https://api.hashnode.com/", {
-//     method: "POST",
-//     headers: {
-//       "Content-Type": "application/json",
-//       Authorization: "32ab9fe7-0331-4efc-bdb8-5a3e0bfdd9b9",
-//     },
-//     body: JSON.stringify({
-//       query:
-//         'query {user(username: "danielcranney") {publication {posts(page: 0) {title brief slug coverImage dateAdded}}}}',
-//     }),
-//   });
-//   const publications = await res.json();
-
-//   if (!publications) {
-//     return {
-//       notFound: true,
-//     };
-//   }
-
-//   return {
-//     props: {
-//       publications,
-//     },
-//   };
-// }
