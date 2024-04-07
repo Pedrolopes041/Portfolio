@@ -287,7 +287,7 @@ export default function Home({ publications }) {
                       scrollTo(myWorkRef.current);
                     }}
                   >
-                    My Work
+                    Meus Trabalhos
                   </button>
                 </li>
                 <li className="z-50 block py-2 list-none lg:inline-block">
@@ -308,10 +308,10 @@ export default function Home({ publications }) {
                 </li>
                 <li className="z-40 block py-2 mt-6 list-none lg:inline-block">
                   <a
-                    href={`mailto:danielcranney@gmail.com`}
+                    href={`mailto:pedroaugustolopesgomes@gmail.com`}
                     className="text-lg btn-brand btn-lg group"
                   >
-                    Get in touch
+                    Entrar em contato
                   </a>
                 </li>
               </ul>
