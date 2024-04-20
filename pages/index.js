@@ -481,7 +481,7 @@ export default function Home({ publications }) {
                     speed={30}
                     eraseSpeed={30}
                     eraseDelay={1500}
-                    text={["Desenvolvedor Front-end", "Desenvolvedor", "UI/UX"]}
+                    text={["Desenvolvedor Full-Stack", "UI/UX"]}
                   />
                 </h2>
                 <p className="w-4/5 text-xl md:w-full">
