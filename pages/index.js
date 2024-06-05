@@ -528,7 +528,7 @@ export default function Home({ publications }) {
                 </div>
                 <div className="flex w-full h-full mb-4 md:pl-8 md:w-2/5 md:mb-0">
                   <Image
-                    src="/eu1.png"
+                    src="/eu.jpg"
                     className="overflow-hidden rounded-md"
                     width={880}
                     height={880}
@@ -914,6 +914,100 @@ export default function Home({ publications }) {
                   </>
                 }
               />
+              <FeaturedProjectCard
+                title={"PALG Barber"}
+                status={"Barbearias"}
+                description={`Experimente o melhor do cuidado masculino na PALG Barber. Oferecemos serviços de corte de cabelo, barba e cuidados pessoais com um toque de sofisticação e atenção aos detalhes, garantindo que você sempre saia satisfeito e confiante.`}
+                float={`right-0`}
+                flexDirection={`flex-col lg:flex-row`}
+                imgWidth={"1366"}
+                imgHeight={"666"}
+                imgSrc={"/projeto3.png"}
+                liveLink={"https://fsw-barber-zeta-sooty.vercel.app//"}
+                repoLink={null}
+                stack={
+                  <>
+                    <Icon
+                      IconType={Html}
+                      title="HTML"
+                      columnSizing={"w-auto"}
+                      width={"w-6"}
+                      height={"h-6"}
+                      flexDirection={"flex-row"}
+                      padding={"p-0"}
+                      titleMargins={"my-0 ml-1"}
+                      titleSize={"text-sm"}
+                      marginBottom={"mb-4"}
+                      marginRight={"mr-3"}
+                      textTransform={"uppercase"}
+                      fixedHeight={"h-auto"}
+                    />
+
+                    <Icon
+                      IconType={Tailwind}
+                      title="Tailwind"
+                      columnSizing={"w-auto"}
+                      width={"w-6"}
+                      height={"h-6"}
+                      flexDirection={"flex-row"}
+                      padding={"p-0"}
+                      titleMargins={"my-0 ml-1"}
+                      titleSize={"text-sm"}
+                      marginBottom={"mb-4"}
+                      marginRight={"mr-3"}
+                      textTransform={"uppercase"}
+                      fixedHeight={"h-auto"}
+                    />
+
+                    <Icon
+                      IconType={ReactJs}
+                      title="React"
+                      columnSizing={"w-auto"}
+                      width={"w-6"}
+                      height={"h-6"}
+                      flexDirection={"flex-row"}
+                      padding={"p-0"}
+                      titleMargins={"my-0 ml-1"}
+                      titleSize={"text-sm"}
+                      marginBottom={"mb-4"}
+                      marginRight={"mr-3"}
+                      textTransform={"uppercase"}
+                      fixedHeight={"h-auto"}
+                    />
+
+                    <Icon
+                      IconType={NextJs}
+                      title="Next"
+                      columnSizing={"w-auto"}
+                      width={"w-6"}
+                      height={"h-6"}
+                      flexDirection={"flex-row"}
+                      padding={"p-0"}
+                      titleMargins={"my-0 ml-1"}
+                      titleSize={"text-sm"}
+                      marginBottom={"mb-4"}
+                      marginRight={"mr-3"}
+                      textTransform={"uppercase"}
+                      fixedHeight={"h-auto"}
+                    />
+                    <Icon
+                      IconType={Supabase}
+                      title="Next"
+                      columnSizing={"w-auto"}
+                      width={"w-6"}
+                      height={"h-6"}
+                      flexDirection={"flex-row"}
+                      padding={"p-0"}
+                      titleMargins={"my-0 ml-1"}
+                      titleSize={"text-sm"}
+                      marginBottom={"mb-4"}
+                      marginRight={"mr-3"}
+                      textTransform={"uppercase"}
+                      fixedHeight={"h-auto"}
+                    />
+                  </>
+                }
+              />
             </div>
 
             {/* Other Projects header */}
@@ -956,7 +1050,7 @@ export default function Home({ publications }) {
                   ECS - Escola de computação solidária | Monitor
                 </p>
                 <ul className="list-disc ml-5">
-                <li className="dark:text-white text-dark">
+                  <li className="dark:text-white text-dark">
                     Trabalhei como monitor de turmas por um período de 6 meses
                     em 2022.{" "}
                   </li>
